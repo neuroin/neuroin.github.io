@@ -1,0 +1,341 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Seperate File VS HTML Style</title>
+		
+		<meta name="author" content="Gautam M">
+		<meta name="keywords" content="HTML, CSS, Javascript, Styles">
+		<meta name="description" content="A brief article on why More CSS is better than More Styles">
+		
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="resources/prism.css">
+		<script src="resources/prism.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<p>L I G H T<br>W E B</p>
+			
+			<a href="#">Sign up</a>
+			<a href="#">Log in</a>
+			<input type="text" placeholder="S e a r c h" title="I do not work ;-;">
+			
+		</header>
+		
+		<nav>
+			<a href="#"> <span>What is CSS?</span> <span class="hide">JUMP</span> </a>
+			<a href="#style-info"> <span>What is the style attribute of HTML?</span> <span class="hide">TO</span> </a>
+			<a href="#css-imp"> <span>Why can't we use HTML's style all the time?</span> <span class="hide">THE</span> </a>
+			<a href="#style-imp"> <span>Should I always have a seperate CSS file?</span> <span class="hide">POINT</span> </a>
+		</nav>
+	
+		
+		<aside>
+			<div>
+				<h3>You Can Also Check Out</h3>
+				<figure>
+					<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg"
+					alt="images/machine.jpg" width=360px height=240px>
+					
+					<figcaption>Learn How A Cat Played A Huge Role In Machine Learning</figcaption>
+				</figure>
+				
+				<figure>
+					<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_960_720.jpg"
+					alt="images/pydog.jpg" width=360px height=240px>
+					
+					<figcaption>How To Train Your Pup Using Python</figcaption>
+				</figure>
+				
+				<figure>
+					<img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg"
+					alt="images/regret.jpg" width=360px height=240px>
+					
+					<figcaption>Local Cat Tries Coding, Regrets It</figcaption>
+				</figure>
+				
+				<figure>
+					<img id="anon" src="https://cdn.pixabay.com/photo/2016/03/03/22/33/anonymus-1235169_960_720.jpg"
+					alt="images/anon.jpg" width=160px height=220px>
+					
+					<img id="caton" src="https://cdn.pixabay.com/photo/2018/02/21/05/17/cat-3169476_960_720.jpg"
+					alt="images/cater.jpg" width=360px height=240px>
+					
+					<figcaption>All You Need To Know About The Anonymous 'Cat'er</figcaption>
+				</figure>
+				
+				<figure>
+					<img src="https://cdn.pixabay.com/photo/2016/09/05/21/37/cat-1647775_960_720.jpg"
+					alt="images/tree.jpg" width=360px height=240px>
+					
+					<figcaption>The Upcoming Binary "Kitty" Tree And How It Works</figcaption>
+				</figure>
+			</div>
+			
+			<div id="comment-div">
+				<h3>C o m m e n t s</h3>
+				<div>
+					<img class="pfp" src="images/unknown.png" width="32px" height="32px">
+					<h4>Rahul Sharma</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p title="if u clik fast enof, u can friz like buton">i like it</p>
+				</div>
+				
+				<div>
+					<img class="pfp" src="images/unknown.png" width="32px" height="32px">
+					<h4>Nikolai Vasotov</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p>i don't understand, plz explain</p>
+				</div>
+				
+				<div>
+					<img class="pfp" src="images/unknown.png" width="32px" height="32px">
+					<h4>Daniel Salkajovik</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p>what</p>
+				</div>
+				
+				<div>
+					<img class="pfp" src="images/unknown.png" width="32px" height="32px">
+					<h4>Christan Tranford</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p>Honestly don't like the format of this, could do better?</p>
+				</div>
+				
+				<div>
+					<img class="pfp" src="images/unknown.png" width="32px" height="32px">
+					<h4>Harsh Irman</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p>I knew this already, not worth to read!!1!</p>
+				</div>
+				
+				<div>
+					<img class="pfp" src="images/caton.png" width="32px" height="32px">
+					<h4>Anonymous</h4>
+					<img class="like" src="images/like.png" width="32px" height="32px">
+					<p>hi</p>
+				</div>
+				
+				<input type="text" placeholder="T y p e   y o u r   c o m m e n t. . .">
+			</div>
+		</aside>
+	
+		<article>
+			<h1>Know How To Use CSS(Files) And <i>Style</i></h1>
+			<img id="profile-img" src="images/profile.jpeg" width=48px height=48px title='"You can hover over more stuff"'>
+			<address>
+			By Gautam M Nair <br> Written on 25th Sep 2023
+			</address>
+			
+			<h2> What is CSS? </h2>
+			<p>
+			CSS, standing for <i>Cascading Style Sheets</i>, is generally used in combination with 
+			<abbr title="HyperText Markup Language; used in defining the overall structure of a web page">HTML</abbr>
+			and <abbr title="High level language used in defining the working of a web page">Javascript</abbr> for Web
+			Development. These three each serve a different purpose towards making a proper web page; HTML gives the structure,
+			CSS gives the visuals, and Javascript gives functionalities.
+			</p>
+			
+			<p>
+			CSS provides a variety of <code class="bump">properties</code> that could be used to customize each and every tag
+			that you have in your HTML code. It follows a <code class="bump">property:value</code> format to change visuals.
+			Ranging from simple fonts(family, size, weight), entity alignments(for text, border, div, etc), and color specifications
+			(for background, text, border, etc) to more complex <abbr title="Changes an entiy in size, position, or angle">transforms
+			</abbr>(scaling, rotating, etc), <abbr title="Defines how any change will transition from one state to another (See my face?)">
+			transitions</abbr>, and much, much more.
+			</p>
+			
+			<p>
+			All in all, its all you need to give a brand new look to your currently bland HTML code. It's extensively used to
+			stylize many web pages, including the page you're reading right now! To give a better example, let's say that I wish
+			to create a button; one using basic HTML and the other being stylized with CSS:
+			</p>
+			
+			<div class="button-box">
+			<button class="all-button">HTML<br>DO NOTHING BUTTON</button>
+			<button class="all-button" id="css-button">HTML + CSS<br>DO NOTHING BUTTON</button>
+			</div>
+			
+			<p>
+			Though both serve the same purpose, one looks more appealing than the other, eh? And that's HT- <i>ahem</i>, CSS of
+			course. Done simply by <u>adding color and a round border</u> to it. You can also add extra steps by giving it a shadow,
+			to give the effect of a raised button. Let's compare more, this time by using links instead.
+			</p>
+			
+			<div class="button-box">
+			<a href='#' class="all-button">RANDOM HTML LINK</a>
+			<a href='#' class="all-button" id="css-link" title="Please don't click on me.">RANDOM HTML + CSS LINK</a>
+			</div>
+			
+			<p>
+			If you're wondering why I am comparing a button to a link, you may have just fallen into my trap! That is, unless
+			you're smart. In fact, that button in question <u>is actually a link</u> in disguise.
+			</p>
+			
+			<p id="style-info">
+			The code for the above will be provided later on. Simply adding some color and rounded corners to a sentence turns
+			it into a button. But wait, doesn't HTML already provide a <code class="bump">style</code> attribute as a way to
+			change your tag's appearance?
+			</p>
+			
+			<h2 style="display:inline;"> What is the <i>style</i> attribute of HTML? </h2>
+			
+			<p>
+			As I mentioned before, CSS provides a variety of properties for each tag in HTML. It gives an appeal for users to
+			stay on our page. <code class="bump">style</code> is an inline tag that is essentially CSS, following the same <code
+			class="bump">property: value</code> format.
+			</p>
+			
+			<p>
+			What makes the the <code class="bump">style</code> attribute stand out from the standard CSS files, is that it can
+			<u>selectively change the design of any entity</u>. If you wish to change the color of one tag, let's say <code
+			class="bump">&lt;p&gt;</code>, to <span style="color:blue">blue</span>. Then, instead of a seperate file, you can
+			directly add the property into the tag:
+			</p>
+			
+			<pre><code class="language-html line-numbers" data-prismjs-copy="Copy">&lt;p style="color:blue"&gt;Hello There!&lt;/p&gt;</code>
+			</pre>
+			
+			<code>
+			<p style="color:blue" class="bump" title="hello :D">Hello There!</p>
+			</code>
+			
+			<p id="css-imp">
+			As you can guess, the <code class="bump">style</code> attribute can be used to specify how a single tag looks. Unlike
+			CSS where, unless specified, all the similar tags will go through the same formatting. That is, the same code above if
+			written in a CSS file would make all paragraphs have the color <span style="color:blue">blue</span>.
+			</p>
+			
+			<h2 style="display:inline;"> Why can't we use HTML's <i>style</i> all the time? </h2>
+			
+			<p>
+			You may ask yourself, why do we actually need a seperate CSS file? Why do we need a seperate file to do a job that can
+			already be done in HTML?
+			</p>
+			
+			<p>
+			While some requisites may be met by <code class="bump">style</code>, it still does not provide control over most of the
+			visual structure of the web page. Of course, the previous two HTML examples were completely clean, no modifications were
+			made to their looks. So let's say we <strong>do</strong> make some modifications, this time using the <code class="bump">
+			style</code> attribute of HTML.
+			</p>
+			
+			<div class="button-box">
+			<button class="all-button" style="background-color:#E0E; color:#FFF; border-radius:25px; border:0; font-family:Verdana; 
+			padding:15px;">HTML<br>DO NOTHING BUTTON</button>
+			<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' class="all-button" style="background-color:#3B3; color:#FFF; 
+			border:0; padding:10px; text-decoration:none; border-radius:10px; font-family:Consolas; text-align:center; padding-top:20px;" 
+			title="You may click on me.">RANDOM HTML LINK</a>
+			</div>
+			
+			<p>
+			These are "buttons" made in HTML, styled with inline CSS properties. Clear duplicates of the CSS variants... well, almost.
+			Thought it would be better to omit some features for this example. Why? Well, the problem with these buttons can be 
+			explained by their code, given below:
+			</p>
+			
+			<pre>
+<code class="language-html line-numbers show-language" data-prismjs-copy="Copy"> 	&lt;button style="background-color:#E0E; color:#FFF; border-radius:25px; border:0; font-family:Verdana; padding:15px;"&gt;HTML&lt;br&gt;DO NOTHING BUTTON&lt;/button&gt;
+	&lt;a href='' style="background-color:#3B3; color:#FFF; border:0; padding:10px; text-decoration:none; border-radius:10px; font-family:Consolas; text-align:center; padding-top:20px;"&gt;RANDOM HTML LINK&lt;/a&gt;</code>
+			</pre>
+			
+			<p>
+			Multiple properties can be specified by adding a <code class="bump">;</code> at the end. On topic, a code shouldn't be so
+			long that one has to scroll right. Of course, you can format the above to look a bit more comprehensible, but there's a limit.
+			</p>
+			
+			<p>
+			Such codes have great readability issues, making it more difficult to manage your code
+			if you happen to format all of your tags like so. A fellow code editor may see this code, but might take some time to
+			understand it. Another problem with this kind of formatting, is that you <em>cannot use <abbr 
+			title="These are selectors used in response to some action performed by the user.">pseudo-selectors</abbr></em>; like 
+			<code class="bump" id="hov-sel">:hover</code>and<code class="bump" id="act-sel">:active</code>.
+			</p>
+			
+			<p>
+			There is another way to format tags, which is more readable and easier to understand.
+			</p>
+			
+			<pre>
+<code class="language-html line-numbers show-language" data-prismjs-copy="Copy">&lt;style&gt;
+	button {
+		background-color: #E0E; 
+		color: #FFF;
+		border-radius: 25px;
+		border: 0;
+		font-family: Verdana;
+		padding: 10px;
+	}
+	
+	a {
+		background-color: #3B3;
+		color: #FFF;
+		border: 0;
+		padding: 10px;
+		text-decoration: none;
+		border-radius: 10px;
+		font-family: Consolas;
+		text-align: center;
+		padding-top:20px;
+	}
+	. . .
+&lt;/style&gt;</code>
+			</pre>
+			
+			<p>
+			Here, this CSS block is embedded into HTML's <code class="bump">head</code> block using <code class="bump">style</code>.
+			This would be how we write it in a CSS file as well. This way, we can <u title="One of those cats is a fraud">add 
+			pseudo-selectors as we like.</u>
+			</p>
+			
+			<p id="style-imp">
+			But essentially, it would make your html file <u id="long">more long and crowded</u> if you wish to give design to many 
+			elements. Not by a large margin, but may be enough to make one scrolling back and forth. These blocks are only suitable for 
+			formatting over some elements.
+			</p>
+			
+			<h2> Should I always have a seperate CSS file?</h2>
+			<p>
+			Now, I made a lot of changes in that button and link. While it is of course a good practice to always a seperate file for
+			your CSS properties, you should never have to create one that only changes, <i>let's say</i>, the color of your text, or
+			your fonts. The <code class="bump">&lt;span&gt;</code> tag would be more suitable for giving such small designs.
+			</p>
+			
+			<p>
+			Let's consider our previous example of giving <span style="color:blue">blue</span> color to a <code class="bump">&lt;p&gt;</code>
+			tag. If we write it in a seperate file:
+			</p>
+			
+			<pre>
+<code class="language-css line-numbers"> \* Kind of lonely here ;-; *\
+	p {
+		color: blue;
+	}</code>
+			</pre>
+			
+			<p>
+			Look at how lonely that <code class="bump">&lt;p&gt;</code> tag feels. 
+			</p>
+			
+			<p>
+			Remember, you can always use <code class="bump">style</code> <em>inline</em> for small visual changes. Shift to a style <em>block
+			</em> inside HTML for bigger changes (like the code I will provide below). And if you feel you have added one too many, then 
+			perhaps it is time to create your new <em>CSS file</em>.
+			</p>
+		</article>
+		
+		<article class="downloads">
+			<p> The code for the CSS styled objects is provided below: </p>
+			<ul>
+				<li>Code for HTML+CSS buttons</li>
+				<a href="resources/css-button-example.html" download="button.html"> <img src="images/download.png" witdh=24px height=24px>D o w n l o a d</a>
+			</ul>
+		</article>
+		
+		<footer>
+			<p id="email">Email: techsupportlw@gmail.com</p>
+			<p style="display:inline">Copyright &copy L I G H T - W E B</p>
+			<p id="contact">Contact: +917078937081</p>
+		</footer> 
+	</body>
+</html>
