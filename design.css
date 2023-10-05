@@ -1,127 +1,266 @@
 
-body {
-	background-color: #F5F5F5;
-}
+body {background-color: #F5F5F5;}
 
 header {
-	background-color: #555;
-	color: #FFF;
 	position: fixed;
-	top: 0px;
+	
+	color: #FFF;
+	background-color: #555;
+	
+	padding: 1rem;
+	z-index: 2;
+	
+	top: 0;
 	left: 0;
 	right: 0;
-	padding: 20px;
-	z-index: 2;
-}
 
-header p {
-	background-color: #333;
-	margin: -20px;
-	padding: 30px;
-	float: left;
-}
+	p {
+		position: absolute;
+		background-color: #333;
+		margin: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		padding: 1.2rem;
+	}
 
-header a {
-	background-color: #444;
-	color: #FFF;
-	font-family: Consolas;
-	text-decoration: none;
-	margin: 2px;
-	padding: 10px;
-	float: right;
-	border-radius: 5px;
-}
+	a {
+		float: right;
+		
+		color: #FFF;
+		background-color: #444;
+		font-family: Consolas;
+		text-decoration: none;
+		
+		margin: 0.2rem;
+		padding: 0.7rem;
+		border-radius: 0.4rem;
+	}
 
-header a:hover {
-	background-color: #666;
-}
+	a:hover {background-color: #666;}
 
-header a:active {
-	background-color: #333;
-}
+	a:active {background-color: #333;}
 
-header input[type="text"] {
-	float: right;
-	width: 30%;
-	font-family: ubuntu mono;
-	margin: 5px 10px 5px 10px;
-	padding: 10px;
-	border-radius: 10px;
-	border: 0;
-	transition: width 500ms ease-out;
-}
+	input[type="text"] {
+		float: right;
+		
+		width: 20vw;
+		font-family: ubuntu mono;
+		
+		margin: 0.4rem;
+		padding: 0.6rem;
+		border: 0;
+		border-radius: 0.6rem;
+		
+		transition: width 500ms ease-out;
+	}
 
-header input[type="text"]:hover {
-	width: 35%;
-}
-
-#profile-img {
-	float: left;
-	margin-right: 10px;
-	border-radius: 25px;
-	transition: transform 1s ease-out;
-}
-
-#profile-img:hover {
-	transform: scale(2.0);
-}
-
-address {
-	margin-top: 15px;
+	input[type="text"]:hover {width: 25vw;}
 }
 
 nav {
-	background-color: rgba(70, 70, 70, 1);
 	position: fixed;
+	
+	width: 4.6vw;
+	background-color: rgba(70, 70, 70, 1);
+	
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 70px;
-	margin-top: 96px;
-	padding-top: 150px;
-	transition: width 250ms, background-color 500ms, border-radius 250ms;
+	
+	margin-top: 12vh;
+	padding: 2rem 1rem;
 	z-index: 1;
+	
+	transition: all 250ms;
+	
+	a {
+		display: block;
+		
+		color: #FFF;
+		background-color: rgb(70, 70, 70);
+		text-decoration: none;
+		font-family: Verdana;
+		
+		padding: 0.6rem;
+		margin: 1.2rem 0;
+		border-radius: 1rem;
+		
+		white-space: nowrap;
+		overflow: hidden;
+		text-align: left;
+		
+		span {display: none;}
+
+		.hide {display: inline;}
+	}
 }
 
 nav:hover {
-	width: 400px;
-	border-radius: 0 50px 50px 0;
+	width: 30vw;
+	border-radius: 0 3rem 3rem 0;
 	background-color: rgba(120, 120, 120, 0.5);
+
+	a span {
+		display: inline;
+		text-shadow: 0 2px #000;
+	}
+	
+	a .hide {display: none;}
 }
 
-nav a {
-	display: block;
-	background-color: rgb(70, 70, 70);
-	padding: 10px;
-	margin: 20px 0 20px 0;
-	border-radius: 15px;
-	color: white;
-	text-decoration: none;
+
+article {
+	width: 640px;
+	background-color: #FFF;
 	font-family: Verdana;
-	white-space: nowrap;
-	overflow: hidden;
-	text-align: left;
-	padding-left: 10px;
+	
+	margin: 150px 0 30px 100px;
+	padding: 10px 50px;
+	border: 1px solid #DDD;
+	border-radius: 25px;
+
+	#profile-img {
+		float: left;
+		
+		margin-right: 10px;
+		border-radius: 25px;
+		
+		transition: transform 1s ease-out;
+	}
+
+	#profile-img:hover {transform: scale(2.0);}
+
+	.bump {
+		background-color: #EEE;
+		font-size: 15px;
+		padding: 4px;
+		border-radius: 3px;
+		}
+			
+	abbr {
+		color: #880;
+		font-style: italic;
+		text-decoration: none;
+	}
+
+	address {margin-top: 15px;}
+
+	p {font-size: 17px;}
 }
 
-nav a span {
-	display: none;
-	overflow: hidden;
+h1 {
+	font-size: 40px;
+	margin-bottom: 5px;
 }
 
-nav:hover a span {
-	display: inline;
-	text-shadow: 0 2px #000;
+.language-html, .language-css {
+	border-radius: 10px;
 }
 
-nav a .hide {
-	display: inline;
-	overflow: hidden;
+.button-box {
+	display: flex;
 }
 
-nav:hover a .hide {
-	display: none;
+.all-button {
+	width: 100%;
+	padding: 20px;
+	margin: 10px;
 }
+
+#css-button {
+	background-color: #E0E;
+	color: #FFF;
+	border-radius: 25px;
+	border: 0;
+	font-family: Verdana;
+	box-shadow: 0px 10px #909;
+	padding: 10px;
+	transition: all 50ms;
+}
+
+#css-button:hover {
+	transform: translate(0, -5px);
+	box-shadow: 0px 15px #707;
+	background-color: #C0C;
+	cursor: pointer;
+}
+
+#css-button:active {
+	transform: translate(0, 10px);
+	box-shadow: 0px 0px #000;
+	background-color: #A0A;
+}
+
+#css-link {
+	background-color: #3B3;
+	color: #FFF;
+	border: 0;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 0px 10px #393;
+	font-family: Consolas;
+	padding-top: 20px;
+	transition: all 100ms;
+}
+
+#css-link:hover {
+	transform: scale(1.1, 1.1);
+	box-shadow: 0px 10px #4B4;
+	background-color: #5D5;
+	color: #000;
+}
+
+#css-link:active {
+	transform: translate(0, 10px);
+	box-shadow: 0px 0px #000;
+	background-color: #191;
+	color: #FFF;
+}
+
+a {
+	text-align: center;
+}
+
+@keyframes color-anim {
+	0%		{background-color: #F33; color: #FFF;}
+	15%		{background-color: #FF3; color: #000;}
+	30%		{background-color: #3F3; color: #000;}
+	45%		{background-color: #3FF; color: #000;}
+	60%		{background-color: #33F; color: #FFF;}
+	75%		{background-color: #F3F; color: #FFF;}
+	100%	{background-color: #F33; color: #FFF;}
+}
+
+@keyframes drop-anim {
+	0%		{transform: none;}
+	100%	{transform: rotate(-90deg) translate(-20px, 40px);}
+}
+
+#hov-sel:hover {
+	animation-name: color-anim;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+#act-sel {
+	display: inline-block;
+}
+
+#act-sel:active {
+	animation-name: drop-anim;
+	animation-duration: 50ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+#long {
+	display:inline-block;
+	transition: transform 500ms ease-out;
+}
+
+#long:hover {transform: scale(2, 0.8);}
 
 aside {
 	float: right;
